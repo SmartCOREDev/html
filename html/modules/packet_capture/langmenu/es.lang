@@ -1,4 +1,0 @@
-<?php
-$arrLangMenu=array(
-"Packet Capture" => "Capturador de Paquetes"
-);
