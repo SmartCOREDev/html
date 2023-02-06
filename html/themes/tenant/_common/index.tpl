@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Issabel</title>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF8" />
+        <title>SmartCORE</title>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic">
     <link rel="stylesheet" href="{$WEBPATH}themes/{$THEMENAME}/css/bootstrap.css">
@@ -25,11 +25,14 @@
     <link rel="stylesheet" href="{$WEBPATH}themes/{$THEMENAME}/css/purple.css">
 
     {$HEADER_LIBS_JQUERY}
-    <script src="libs/js/base.js"></script>
-    <script src="libs/js/sticky_note/sticky_note.js"></script>
-    <script src="libs/js/iframe.js"></script>
+        <!--<script type='text/javascript' src="{$WEBCOMMON}js/base.js"></script>-->
+        <!--<script type='text/javascript' src="{$WEBCOMMON}js/sticky_note.js"></script>-->
+        <!--<script type='text/javascript' src="{$WEBCOMMON}js/iframe.js"></script>-->
+	<script type='text/javascript' src="libs/js/base.js"></script>
+        <script type='text/javascript' src="libs/js/sticky_note/sticky_note.js"></script>
+        <script type='text/javascript' src="libs/js/iframe.js"></script>
 
-    {$HEADER}
+        {$HEADER}
     {$HEADER_MODULES}
     </head>
     <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" class="mainBody page-body" {$BODYPARAMS}>
@@ -54,7 +57,7 @@
 
         <!-- Footer -->
         <footer class="main" style="margin-left:16px;">
-            <a href="http://www.issabel.org" style="color: #444; text-decoration: none;" target='_blank'>Issabel</a> {$ISSABEL_LICENSED} <a href="http://www.opensource.org/licenses/gpl-license.php" target='_blank' style="color: #445; text-decoration: none;" >GPL</a>. 2006 - {$currentyear}.
+            <a href="http://www.sigmatelecom.com.br" style="color: #444; text-decoration: none;" target='_blank'>SmartCORE v4.0</a> - Powered by Sigma Telecom.
         </footer>
 
         {*<br />*}
@@ -125,15 +128,15 @@ $(document).ready(function(e) {
         </div>
 {/if}
         <!-- Bottom Scripts -->
-        <script src="{$WEBPATH}themes/{$THEMENAME}/js/gsap/main-gsap.js"></script>
-        <script src="{$WEBPATH}themes/{$THEMENAME}/js/bootstrap.js"></script>
-        <script src="{$WEBPATH}themes/{$THEMENAME}/js/joinable.js"></script>
-        <script src="{$WEBPATH}themes/{$THEMENAME}/js/resizeable.js"></script>
-        <script src="{$WEBPATH}themes/{$THEMENAME}/js/neon-api.js"></script>
-        <script src="{$WEBPATH}themes/{$THEMENAME}/js/jquery.validate.min.js"></script>
-        <script src="{$WEBPATH}themes/{$THEMENAME}/js/neon-login.js"></script>
-        <script src="{$WEBPATH}themes/{$THEMENAME}/js/neon-custom.js"></script>
-        <script src="{$WEBPATH}themes/{$THEMENAME}/js/neon-demo.js"></script>
+        <script type='text/javascript' src="{$WEBPATH}themes/{$THEMENAME}/js/gsap/main-gsap.js"></script>
+        <script type='text/javascript' src="{$WEBPATH}themes/{$THEMENAME}/js/bootstrap.js"></script>
+        <script type='text/javascript' src="{$WEBPATH}themes/{$THEMENAME}/js/joinable.js"></script>
+        <script type='text/javascript' src="{$WEBPATH}themes/{$THEMENAME}/js/resizeable.js"></script>
+        <script type='text/javascript' src="{$WEBPATH}themes/{$THEMENAME}/js/neon-api.js"></script>
+        <script type='text/javascript' src="{$WEBPATH}themes/{$THEMENAME}/js/jquery.validate.min.js"></script>
+        <script type='text/javascript' src="{$WEBPATH}themes/{$THEMENAME}/js/neon-login.js"></script>
+        <script type='text/javascript' src="{$WEBPATH}themes/{$THEMENAME}/js/neon-custom.js"></script>
+        <script type='text/javascript' src="{$WEBPATH}themes/{$THEMENAME}/js/neon-demo.js"></script>
     </div>
 </body>
 </html>
