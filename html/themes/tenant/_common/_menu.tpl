@@ -2,6 +2,7 @@
 <script type='text/javascript'>
 var themeName='elastixneo'; //nombre del tema
 $(document).ready(function(){
+    LblRegister = '{/literal}{$Register}{literal}';
     $("#togglebookmark").click(function() {
         var imgBookmark = $("#togglebookmark").attr('src');
         if(/bookmarkon.png/.test(imgBookmark)) {
@@ -83,7 +84,6 @@ function removeNeoDisplayOnMouseOver(ref){
 <input type="hidden" id="lblRegisterCm"   value="{$lblRegisterCm}" />
 <input type="hidden" id="lblRegisteredCm" value="{$lblRegisteredCm}" />
 <input type="hidden" id="userMenuColor" value="{$MENU_COLOR}" />
-<input type="hidden" id="lblSending_request" value="{$SEND_REQUEST}" />
 <input type="hidden" id="toolTip_addBookmark" value="{$ADD_BOOKMARK}" />
 <input type="hidden" id="toolTip_removeBookmark" value="{$REMOVE_BOOKMARK}" />
 <input type="hidden" id="toolTip_addingBookmark" value="{$ADDING_BOOKMARK}" />
@@ -153,24 +153,34 @@ function removeNeoDisplayOnMouseOver(ref){
                             {else}
                                 <li>
                             {/if}
-                                    <a href="index.php?menu={$idSubMenu}">
-					<!--<span>{$idSubMenu}</span>-->
-					<span>{$subMenu.Name}</span>
-                                    </a>
-                                    {if $subMenu.children}
-                                        <ul>
-                                            <!--recorremos el arreglo del menu de tercer nivel-->
-                                            {foreach from=$subMenu.children key=idSubMenu2 item=subMenu2}
-                                                <li>
-                                                    <a href="index.php?menu={$idSubMenu2}">
-							<!--<span>{$idSubMenu2}</span>-->
-							<span>{$subMenu2.Name}</span>
-                                                    </a>
-                                                </li>
-                                            {/foreach}
-                                        </ul>
-                                    {/if}
-                                </li>
+                            {if $subMenu.Type eq "popup"}
+                                <a href="{$subMenu.Link}" target="{$idSubMenu}">
+                                    <span>{$subMenu.Name}</span>
+                                </a>
+                            {else}
+                                <a href="index.php?menu={$idSubMenu}">
+                                    <span>{$subMenu.Name}</span>
+                                </a>
+                            {/if}
+                            {if $subMenu.children}
+                                <ul>
+                                    <!--recorremos el arreglo del menu de tercer nivel-->
+                                    {foreach from=$subMenu.children key=idSubMenu2 item=subMenu2}
+                                        <li>
+                                            {if $subMenu2.Type eq "popup"}
+                                                <a href="{$subMenu2.Link}" target="{$idSubMenu2}">
+                                                    <span>{$subMenu2.Name}</span>
+                                                </a>
+                                            {else}
+                                                <a href="index.php?menu={$idSubMenu2}">
+                                                    <span>{$subMenu2.Name}</span>
+                                                </a>
+                                            {/if}
+                                        </li>
+                                    {/foreach}
+                                </ul>
+                            {/if}
+                        </li>
                         {/foreach}
                     </ul>
                 </li>
@@ -191,8 +201,7 @@ function removeNeoDisplayOnMouseOver(ref){
             <!-- Profile Info -->
             <li class="profile-info dropdown pull-right"><!-- add class "pull-right" if you want to place this from right -->
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <!--<img  style="border:0px" src="index.php?menu=_issabelutils&action=getImage&ID={$USER_ID}&rawmode=yes" alt="" class="img-circle" width="44" />-->
-            <img  style="border:0px" src="/themes/tenant/images/Icon-user.png" alt="" class="img-circle" width="44" />
+                    <img  style="border:0px" src="index.php?menu=address_book&type=internal&action=getImage&idPhoto={$EXTENSION}&rawmode=yes&thumbnail=yes" alt="" class="img-circle" width="44" />
                     {$USER_LOGIN}
                 </a>
                 <!-- Reverse Caret -->
@@ -225,7 +234,7 @@ function removeNeoDisplayOnMouseOver(ref){
     <span style='float:right; width:400px;'>
         <ul style="padding-top:12px;" class="list-inline links-list pull-right neo-topbar-notification">
 
-        <li id="header_notification_bar" class="profile-info dropdown">
+        <li id="header_registration_info" class="profile-info dropdown">
             <a data-toggle="dropdown" class="" href="#">
                 <i class="fa fa-info-circle"></i>
             </a>
