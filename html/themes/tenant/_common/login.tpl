@@ -8,7 +8,7 @@
 	<meta name="description" content="Neon Admin Panel" />
 	<meta name="author" content="" />
 
-	<title>Issabel - {$PAGE_NAME}</title>
+	<title>SmartCORE - {$PAGE_NAME}</title>
 
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic">
@@ -28,40 +28,21 @@
 	<![endif]-->
 
     {$HEADER_LIBS_JQUERY}
-    <script src="{$WEBPATH}themes/{$THEMENAME}/js/lottie.min.js"></script>
 </head>
 <body class="page-body login-page login-form-fall" data-url="http://neon.dev">
 
 
-<!-- This is needed when you send requests via Ajax -->
-<script type="text/javascript">
+<!-- This is needed when you send requests via Ajax --><script type="text/javascript">
 var baseurl = '';
-
-$(document).ready(function() {
-    var anim;
-    var animData = {
-        container: document.getElementById('animIssabel'),
-        renderer: 'svg',
-        loop: false,
-        autoplay: true,
-        rendererSettings: {
-            progressiveLoad: false
-        },
-        path: '{$WEBPATH}themes/{$THEMENAME}/images/animIssabel.json'
-    };
-    anim = bodymovin.loadAnimation(animData);
-    anim.setSpeed(1.5);
-});
 </script>
 
 <div class="login-container">
 
-	<div class="login-header login-caret" style="padding:50px 0 10px 0;">
+	<div class="login-header login-caret">
 
 		<div class="login-content">
 
-			<!--img src="{$WEBPATH}themes/{$THEMENAME}/images/issabel_logo_mini.png" width="200" height="62" alt="Issabel logo" /-->
-            <div id="animIssabel" style='width:200px; height:200px; margin:auto;'></div>
+			<img src="{$WEBPATH}themes/{$THEMENAME}/images/issabel_logo_mini.png" width="350" height="59" alt="Issabel logo" />
 
 			<p class="description"></p>
 
@@ -71,9 +52,13 @@ $(document).ready(function() {
 				<span>logging in...</span>
 			</div>
 		</div>
+	
+	</div>
+
 
 	</div>
 
+	
 	<div class="login-progressbar">
 		<div></div>
 	</div>
@@ -125,7 +110,7 @@ $(document).ready(function() {
 
 			<div class="login-bottom-links">
 
-				<a href="http://www.issabel.org" style="text-decoration: none;" target='_blank'>Issabel</a> {$ISSABEL_LICENSED} <a href="http://www.opensource.org/licenses/gpl-license.php" style="text-decoration: none;" target='_blank'>GPL</a>. 2006 - {$currentyear}.</div>
+				<a href="http://www.sigmatelecom.com.br" style="text-decoration: none;" target='_blank'>SmartCORE v4.0</a> - Powered by Sigma Telecom.</div>
 
 			</div>
 
@@ -137,15 +122,15 @@ $(document).ready(function() {
 
 
 	<!-- Bottom Scripts -->
-	<script src="{$WEBPATH}themes/{$THEMENAME}/js/gsap/main-gsap.js"></script>
-	<script src="{$WEBPATH}themes/{$THEMENAME}/js/bootstrap.js"></script>
-	<script src="{$WEBPATH}themes/{$THEMENAME}/js/joinable.js"></script>
-	<script src="{$WEBPATH}themes/{$THEMENAME}/js/resizeable.js"></script>
-	<script src="{$WEBPATH}themes/{$THEMENAME}/js/neon-api.js"></script>
-	<script src="{$WEBPATH}themes/{$THEMENAME}/js/jquery.validate.min.js"></script>
-	<script src="{$WEBPATH}themes/{$THEMENAME}/js/neon-login.js"></script>
-	<script src="{$WEBPATH}themes/{$THEMENAME}/js/neon-custom.js"></script>
-	<script src="{$WEBPATH}themes/{$THEMENAME}/js/neon-demo.js"></script>
+	<script type='text/javascript' src="{$WEBPATH}themes/{$THEMENAME}/js/gsap/main-gsap.js"></script>
+	<script type='text/javascript' src="{$WEBPATH}themes/{$THEMENAME}/js/bootstrap.js"></script>
+	<script type='text/javascript' src="{$WEBPATH}themes/{$THEMENAME}/js/joinable.js"></script>
+	<script type='text/javascript' src="{$WEBPATH}themes/{$THEMENAME}/js/resizeable.js"></script>
+	<script type='text/javascript' src="{$WEBPATH}themes/{$THEMENAME}/js/neon-api.js"></script>
+	<script type='text/javascript' src="{$WEBPATH}themes/{$THEMENAME}/js/jquery.validate.min.js"></script>
+	<script type='text/javascript' src="{$WEBPATH}themes/{$THEMENAME}/js/neon-login.js"></script>
+	<script type='text/javascript' src="{$WEBPATH}themes/{$THEMENAME}/js/neon-custom.js"></script>
+	<script type='text/javascript' src="{$WEBPATH}themes/{$THEMENAME}/js/neon-demo.js"></script>
 
 </body>
 </html>

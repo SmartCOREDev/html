@@ -168,7 +168,7 @@ function getContent(&$smarty, $iss_module_name, $withList)
                 $restrict_mods = false;
                 break;
             case 'reload':
-                break;
+            break;
             default:
                 $bootstrap_settings['skip_astman'] = true;
                 break;
@@ -1003,11 +1003,11 @@ function renderPpbxAPIFrame($endpoint)
 
 function atualizar_contato()
 {
-    $servername = "10.1.1.5";
+    $servername = "172.17.1.236";
     $username = "smartcore";
     $password = "s1gm4f0n7";
     $dbname = "asterisk";
-    $empresa = "laraeassociados";
+    $empresa = "teste";
     // Create connection
     $conn = mysqli_connect($servername, $username, $password, $dbname);
     // Check connection
@@ -1071,7 +1071,7 @@ function atualizar_contato()
     // $servidor = 'https://prov.smartcore.net.br:30443/api/testee';
     $servidor = 'https://prov.smartcore.net.br:30443/api/agenda?api_token=kzEndgODTi6jnyOjooY6WhjTWbDR8erSJ32mcTTYLeIS9XwFYYmEziaXsZLv';
     // $servidor = 'https://prov.smartcore.net.br:30443/api/updater-agenda';
-    // Parametros da requisiÃ§Ã£o
+    // Parametros da requisição
     $content = http_build_query(array(
         'data' => json_encode($json2),
         'pass' => json_encode($array_xlm),
@@ -1087,7 +1087,7 @@ function atualizar_contato()
             'content' => $content
         )
     ));
-    // Realize comunicaÃ§Ã£o com o servidor
+    // Realize comunicação com o servidor
     $contents = file_get_contents($servidor, null, $context);
     $resposta = json_encode($contents);  //Parser da resposta Json
     // echo $contents;
