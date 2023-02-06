@@ -1,5 +1,0 @@
-<?php
-$arrLangMenu=array(
-"uPnP Control" => "Controlador uPnP"
-);
-

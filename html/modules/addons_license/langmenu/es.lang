@@ -1,5 +1,0 @@
-<?php
-$arrLangMenu=array(
-"License Manager" => "Administrador de Licencias"
-);
-

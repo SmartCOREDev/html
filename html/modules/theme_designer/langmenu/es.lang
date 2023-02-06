@@ -1,5 +1,0 @@
-<?php
-$arrLangMenu=array(
-"Theme Designer" => "Diseñador de Temas"
-);
-
